@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2026-02-14
+  Changes:
+    - added script that will ensure lighthouses placed before lighthouse was separate 
+      mod will work properly 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-02-14
+  Changes:
+    - changed surface conditions for lighthouse. 
+      It can now be placed on more planets than before
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-02-14
+  Changes:
+    - initial release
+---------------------------------------------------------------------------------------------------
