@@ -38,9 +38,12 @@ script.on_nth_tick(120, function()
 			storage.lighthouse_night_lights[id] = nil
 		else
 			local fluid = lighthouse.fluidbox and lighthouse.fluidbox[1]
-			local has_fuel = (fluid and fluid.amount or 0) > 0
+			local amount = (fluid and fluid.amount) or 0
+			local has_fuel = amount > 0.01
 
 			if has_fuel then
+				data.empty_ticks = 0
+
 				if not (data.lamp and data.lamp.valid) then
 					local lamp = lighthouse.surface.create_entity({
 						name = "lighthouse-night-light",
@@ -55,9 +58,13 @@ script.on_nth_tick(120, function()
 					end
 				end
 			else
-				if data.lamp and data.lamp.valid then
-					data.lamp.destroy()
-					data.lamp = nil
+				data.empty_ticks = (data.empty_ticks or 0) + 1
+
+				if data.empty_ticks >= 3 then
+					if data.lamp and data.lamp.valid then
+						data.lamp.destroy()
+						data.lamp = nil
+					end
 				end
 			end
 		end
