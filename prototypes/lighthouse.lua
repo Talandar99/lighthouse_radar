@@ -288,7 +288,29 @@ data:extend({
 		circuit_wire_max_distance = default_circuit_wire_max_distance,
 	},
 })
-
+data:extend({
+	{
+		type = "technology",
+		name = "lighthouse",
+		icon = "__lighthouse_radar__/graphics/lighthouse-technology.png",
+		icon_size = 256,
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "lighthouse",
+			},
+		},
+		prerequisites = { "concrete", "radar", "oil-processing" },
+		unit = {
+			count = 300,
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+			},
+			time = 30,
+		},
+	},
+})
 if mods["cargo-ships"] then
 	data:extend({
 		{
@@ -302,13 +324,11 @@ if mods["cargo-ships"] then
 					recipe = "lighthouse",
 				},
 			},
-			prerequisites = { "concrete", "radar" },
-
+			prerequisites = { "concrete", "radar", "automated_water_transport" },
 			research_trigger = {
 				type = "build-entity",
 				entity = "indep-boat",
 			},
 		},
 	})
-	table.insert(data.raw["technology"]["lighthouse"].prerequisites, "automated_water_transport")
 end
