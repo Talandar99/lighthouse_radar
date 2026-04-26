@@ -289,23 +289,26 @@ data:extend({
 	},
 })
 
-data:extend({
-	{
-		type = "technology",
-		name = "lighthouse",
-		icon = "__lighthouse_radar__/graphics/lighthouse-technology.png",
-		icon_size = 256,
-		effects = {
-			{
-				type = "unlock-recipe",
-				recipe = "lighthouse",
+if mods["cargo-ships"] then
+	data:extend({
+		{
+			type = "technology",
+			name = "lighthouse",
+			icon = "__lighthouse_radar__/graphics/lighthouse-technology.png",
+			icon_size = 256,
+			effects = {
+				{
+					type = "unlock-recipe",
+					recipe = "lighthouse",
+				},
+			},
+			prerequisites = { "concrete", "radar" },
+
+			research_trigger = {
+				type = "build-entity",
+				entity = "indep-boat",
 			},
 		},
-		prerequisites = { "automated_water_transport", "concrete", "radar" },
-
-		research_trigger = {
-			type = "build-entity",
-			entity = "indep-boat",
-		},
-	},
-})
+	})
+	table.insert(data.raw["technology"]["lighthouse"].prerequisites, "automated_water_transport")
+end
