@@ -140,18 +140,6 @@ data:extend({
 					draw_as_shadow = true,
 					scale = 0.5,
 				},
-				--				{
-				--					filename = "__lighthouse_radar__/graphics/lighthouse_light.png",
-				--					blend_mode = "additive",
-				--					width = 256,
-				--					height = 730,
-				--					apply_projection = false,
-				--					direction_count = 1,
-				--					line_length = 1,
-				--					shift = util.by_pixel(1.0, -130.0),
-				--					draw_as_glow = true,
-				--					scale = 0.5,
-				--				},
 			},
 		},
 		impact_category = "metal",
@@ -232,6 +220,7 @@ data:extend({
 			--usage_priority = "lamp",
 		},
 		energy_usage_per_tick = "5kW",
+		always_on = true,
 		darkness_for_all_lamps_on = 0.5,
 		darkness_for_all_lamps_off = 0.3,
 		--light = { intensity = 0.9, size = 40, color = { 1, 1, 0.75 } },
@@ -286,6 +275,16 @@ data:extend({
 
 		circuit_connector = circuit_connector_definitions["lamp"],
 		circuit_wire_max_distance = default_circuit_wire_max_distance,
+	},
+})
+data:extend({
+	{
+		type = "sprite",
+		name = "lighthouse-glow",
+		filename = "__lighthouse_radar__/graphics/lighthouse_light.png",
+		width = 256,
+		height = 730,
+		flags = { "no-crop" },
 	},
 })
 data:extend({
