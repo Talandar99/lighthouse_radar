@@ -22,7 +22,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "lighthouse",
-		category = "advanced-crafting",
+		categories = { "advanced-crafting" },
 		enabled = false,
 		ingredients = {
 			{ type = "item", name = "pipe", amount = 10 },
@@ -117,28 +117,28 @@ data:extend({
 		pictures = {
 			layers = {
 				{
-					filename = "__lighthouse_radar__/graphics/lighthouse.png",
+					filename = "__lighthouse_radar__/graphics/lighthouse668.png",
 					priority = "low",
-					width = 256,
-					height = 730,
+					width = 668,
+					height = 668,
 					apply_projection = false,
 					direction_count = 1,
 					line_length = 1,
-					shift = util.by_pixel(1.0, -130.0),
-					scale = 0.5,
+					shift = util.by_pixel(0, 0),
+					scale = 0.7,
 					--scale = 0.25,
 				},
 				{
-					filename = "__lighthouse_radar__/graphics/lighthouse_shadow.png",
+					filename = "__lighthouse_radar__/graphics/lighthouse668shadow.png",
 					priority = "low",
-					width = 720,
-					height = 256,
+					width = 668,
+					height = 668,
 					apply_projection = false,
 					direction_count = 1,
 					line_length = 1,
-					shift = util.by_pixel(140, 5.0),
+					shift = util.by_pixel(0, 0),
 					draw_as_shadow = true,
-					scale = 0.5,
+					scale = 0.7,
 				},
 				--				{
 				--					filename = "__lighthouse_radar__/graphics/lighthouse_light.png",
@@ -254,17 +254,17 @@ data:extend({
 		picture_on = {
 			layers = {
 				{
-					filename = "__lighthouse_radar__/graphics/lighthouse_light.png",
+					filename = "__lighthouse_radar__/graphics/lighthouse668light.png",
 					blend_mode = "additive",
-					width = 256,
-					height = 730,
+					width = 668,
+					height = 668,
 					apply_projection = false,
 					direction_count = 1,
 					line_length = 1,
 					--shift = util.by_pixel(1.0, -130.0),
-					shift = util.by_pixel(17.0, -146.0),
+					shift = util.by_pixel(16, -16),
 					draw_as_glow = true,
-					scale = 0.5,
+					scale = 0.7,
 				},
 			},
 		},
@@ -292,8 +292,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "lighthouse",
-		icon = "__lighthouse_radar__/graphics/lighthouse-technology.png",
-		icon_size = 256,
+		icon = "__lighthouse_radar__/graphics/lighthouse668technology.png",
+		icon_size = 448,
 		effects = {
 			{
 				type = "unlock-recipe",
@@ -316,8 +316,8 @@ if mods["cargo-ships"] then
 		{
 			type = "technology",
 			name = "lighthouse",
-			icon = "__lighthouse_radar__/graphics/lighthouse-technology.png",
-			icon_size = 256,
+			icon = "__lighthouse_radar__/graphics/lighthouse668technology.png",
+			icon_size = 448,
 			effects = {
 				{
 					type = "unlock-recipe",

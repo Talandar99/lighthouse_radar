@@ -37,8 +37,7 @@ script.on_nth_tick(120, function()
 			end
 			storage.lighthouse_night_lights[id] = nil
 		else
-			local fluid = lighthouse.fluidbox and lighthouse.fluidbox[1]
-			local amount = (fluid and fluid.amount) or 0
+			local amount = lighthouse.get_fluid_count()
 			local has_fuel = amount > 0.01
 
 			if has_fuel then

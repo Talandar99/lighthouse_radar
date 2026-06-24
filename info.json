@@ -1,6 +1,6 @@
 {
     "name": "lighthouse_radar",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "title": "Lighthouse Radar",
     "author": "Talandar",
     "dependencies": [
@@ -9,5 +9,5 @@
         "? cargo-ships"
     ],
     "description": "Liquid fuel powered lighthouse, that helps you discover distant shores",
-    "factorio_version": "2.0"
+    "factorio_version": "2.1"
 }
