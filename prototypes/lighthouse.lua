@@ -72,6 +72,7 @@ data:extend({
 		--max_distance_of_nearby_sector_revealed = 6,--maraxsis sonar
 		max_distance_of_nearby_sector_revealed = 2,
 		energy_per_nearby_scan = "2kJ",
+		diesel_fuel_fluid_filter = true,
 		energy_source = {
 			type = "fluid",
 			burns_fluid = true, -- fluid used as power

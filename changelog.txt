@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2026-06-27
+  Changes:
+    - THIS VERSION OF THE MOD CONTAIN CHANGES THAT WILL BREAK EXISTING
+      FACTORIES. 
+    - Added support for newest version of diesel engine. You might need to mine
+      and place existing lighthouses 
+    - lighthouse no longar have pressure limitations. 
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2026-06-26
   Changes:
